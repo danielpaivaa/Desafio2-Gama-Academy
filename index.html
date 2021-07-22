@@ -7,9 +7,9 @@
     <meta name="author" content="Daniel Paiva" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/Javascript" src="./script.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Document</title>
+    <title>Data Base | Gama Academy</title>
 </head>
 
 <body>
@@ -19,19 +19,108 @@
     <main>
         <div class="containerCentral">
             <div>
-                <label><h4>Clique aqui para cadastrar um novo cliente:</h4></label>
-                <a href="./pages/cadastroCliente.html">
-                    <input id="buttonCentral" type="button" value="Cadastrar" />
-                </a>
+                <label>
+                    <h3>Clique aqui para cadastrar um novo cliente:</h3>
+                </label>
+                <input class="buttonUsuario" id="buttonCentral" type="button" value="Cadastrar" />
             </div>
             <div>
-                <label><h4>Clique aqui para cadastrar um novo produto:</h4></label>
-                <a href="./pages/cadastroProduto.html">
-                    <input id="buttonCentral" type="button" value="Cadastrar" />
-                </a>
+                <label>
+                    <h3>Clique aqui para cadastrar um novo produto:</h3>
+                </label>
+                <input class="buttonProduto" id="buttonCentral" type="button" value="Cadastrar" />
             </div>
-        </div>
     </main>
+    <footer>
+        <div id="modalCadastro" class="modalContainer">
+            <div class="modalUsuario">
+                <button id="fecharModal" class="fechar">X</button>
+                <h3>Novo Usuário</h3>
+                <form action="#" class="formCadastro">
+                    <label>Nome:</label>
+                    <div>
+                        <input class="cardUsuario" type="text" id="campoNome" placeholder="Digite seu nome"
+                            title="Digite seu nome" />
+                    </div>
+
+                    <label>E-mail:</label>
+                    <div>
+                        <input class="cardUsuario" type="email" id="campoEmail" placeholder="Digite seu e-mail"
+                            title="Digite seu e-mail" />
+                    </div>
+
+                    <label>Telefone:</label>
+                    <div>
+                        <input class="cardUsuario" pattern="^\d{2}-\d{5}-\d{4}$" type="tel" id="campoTelefone"
+                            required="number" placeholder="Digite seu Telefone" title="Digite seu telefone" />
+                    </div>
+
+                    <label>Endereço:</label>
+                    <div>
+                        <input class="cardUsuario" type="text" id="campoRua" placeholder="Digite seu endereço"
+                            title="Digite sua Endereço" />
+                    </div>
+
+                    <label>Cidade:</label>
+                    <div>
+                        <input class="cardUsuario" type="text" id="campoCidade" placeholder="Digite sua cidade"
+                            title="Digite sei cidade" />
+                    </div>
+
+                    <center>
+                        <div class="cardButton">
+                            <input class="buttonFrom" type="button" value="Cancelar" id="campoButtonCancel"
+                                title="Click para cancelar" />
+
+                            <input class="buttonFrom" type="button" onclick="cadastroCliente()" value="Cadastrar"
+                                id="campoButton" title="Click para se cadastrar" />
+                        </div>
+                    </center>
+
+                </form>
+
+            </div>
+
+        </div>
+        <div id="modalCadastroProduto" class="modalContainerProduto">
+        <div class="modalProduto">
+            <button id="fecharModal" class="fechar">X</button>
+                <h3>Novo Produto</h3>
+                <form action="#" class="formCadastro">
+            <form action="#" class="formCadastro">
+                <div class="cardName">
+                    <label>Nome: </label>
+                    <input class="cardProduto" type="text" id="campoNamePorduct" placeholder="Digite o nome do produto"
+                        title="Digite o nome do produto" />
+                </div>
+                <div class="cardDescrition">
+                    <label>Descrição: </label>
+                    <input class="cardProduto" type="text" id="campoDescritionProduct" placeholder="Digite uma descrição"
+                        title="Digite uma descrição" />
+                </div>
+                <div class="cardId">
+                    <label>ID produto:</label>
+                    <input class="cardProduto" type="number" id="campoIdProduct" placeholder="Digite o ID" title="Digite o ID" />
+                </div>
+                <div class="cardPrice">
+                    <label>Preço: </label>
+                    <input class="cardProduto" type="number" id="campoPriceProduct" placeholder="Digite o preço" title="Digite o preço" />
+                </div>
+                <center>
+                    <div class="cardButton">
+                        <input class="buttonFrom" type="button" value="Cancelar" id="campoButtonCancel"
+                            title="Click para cancelar" />
+
+                        <input class="buttonFrom" type="button" onclick="cadastroProduto()" value="Cadastrar"
+                            id="campoButton" title="Click para se cadastrar" />
+                    </div>
+                </center>
+
+            </form>
+        </div>
+    </div>
+    </footer>
 </body>
+<script type="text/Javascript" src="./script.js"></script>
 
 </html>
