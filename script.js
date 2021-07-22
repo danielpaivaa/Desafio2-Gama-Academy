@@ -1,5 +1,5 @@
 // SCRIPT CADASTRO
-function cadastroCliente() {
+function cadastroUsuario() {
   let dadoNome = document.getElementById("campoNome");
   let dadoEmail = document.getElementById("campoEmail");
   let dadoTelefone = document.getElementById("campoTelefone");
