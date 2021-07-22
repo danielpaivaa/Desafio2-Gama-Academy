@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/Javascript" src="../script.js" ></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
     <title>Document</title>
 </head>
 <body>
     <header>
-        Cadastro Cliente Gama Academy
+        <h1>Cadastro Cliente Gama Academy</h1>
     </header>
     <main>
         <div>
@@ -21,7 +22,8 @@
                     <input type="email" id="campoEmail" placeholder="Digite seu e-mail" title="Digite seu e-mail" />
                 </div>
                 <div class="cardTelefone">
-                    <input type="number" id="campoTelefone" placeholder="Digite seu Telefone" title="Digite seu telefone" />
+                    <input pattern="^\d{2}-\d{5}-\d{4}$" type="tel" id="campoTelefone" required="number" placeholder="Digite seu Telefone" title="Digite seu telefone" />
+                    
                 </div>
                 <div class="cardRua">
                     <input type="text" id="campoRua" placeholder="Digite seu endereço" title="Digite sua Endereço" />
